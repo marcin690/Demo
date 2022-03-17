@@ -111,37 +111,37 @@ include_once('template-parts/header.php');
 
                     <div class="row slick_slider" data-slick='{"slidesToShow": 4, "slidesToScroll": 1, "arrows":true, "autoplay":true, "dots":false, "infinite":true, "responsive":[{"breakpoint":992,"settings":{"slidesToShow": 2}},{"breakpoint":620,"settings":{"slidesToShow": 1}}]}'>
 
-<?php if( have_rows('bannery') ): while ( have_rows('bannery') ) : the_row(); ?>
+                    <?php if( have_rows('bannery') ): while ( have_rows('bannery') ) : the_row(); ?>
 
-    <div class="col d-flex align-items-stretch">
-        <div class="featured-imagebox featured-imagebox-portfolio style3">
-            <!-- featured-thumbnail -->
-            <div class="featured-thumbnail">
-                <a target="_blank" href="<?php the_sub_field('link_banneru'); ?>">
-            <?php
-$image = get_sub_field('banner');
-$size = 'medium'; // (thumbnail, medium, large, full or custom size)
-if( $image ) {
-echo wp_get_attachment_image( $image, $size );
-}
-?></a>
+                        <div class="col d-flex align-items-stretch">
+                            <div class="featured-imagebox featured-imagebox-portfolio style3">
+                                <!-- featured-thumbnail -->
+                                <div class="featured-thumbnail">
+                                    <a target="_blank" href="<?php the_sub_field('link_banneru'); ?>">
+                                <?php
+                    $image = get_sub_field('banner');
+                    $size = 'medium'; // (thumbnail, medium, large, full or custom size)
+                    if( $image ) {
+                    echo wp_get_attachment_image( $image, $size );
+                    }
+                    ?></a>
             </div>
             <!-- featured-thumbnail end-->
-            <div class="featured-content-inner">
-                <div class="featured-content">
-                    <div class="featured-title">
-                        <h3><a target="_blank" href="<?php the_sub_field('link_banneru'); ?>" tabindex="0"><?php the_sub_field('nazwa_banneru'); ?></a></h3>
-                    </div>
+                    <div class="featured-content-inner">
+                        <div class="featured-content">
+                            <div class="featured-title">
+                                <h3><a target="_blank" href="<?php the_sub_field('link_banneru'); ?>" tabindex="0"><?php the_sub_field('nazwa_banneru'); ?></a></h3>
+                            </div>
 
-                </div>
-                <div class="ttm-footer">
-                    <a class="ttm-btn btn-inline ttm-btn-size-md ttm-icon-btn-right ttm-btn-color-dark" target="_blank" href="<?php the_sub_field('link_banneru'); ?>" tabindex="0"> Zobacz <i class="ti ti-plus"></i></a>
-                </div>
-            </div>
+                        </div>
+                        <div class="ttm-footer">
+                            <a class="ttm-btn btn-inline ttm-btn-size-md ttm-icon-btn-right ttm-btn-color-dark" target="_blank" href="<?php the_sub_field('link_banneru'); ?>" tabindex="0"> Zobacz <i class="ti ti-plus"></i></a>
+                        </div>
+                    </div>
         </div>
     </div>
 
-<?php endwhile; else :endif; ?>
+                <?php endwhile; else :endif; ?>
 
 
                     </div>
@@ -153,7 +153,5 @@ echo wp_get_attachment_image( $image, $size );
         </div>
 
 
-<?php
-
-get_footer();
+<?php get_footer();
 ?>
